@@ -11,9 +11,10 @@ function App() {
       .then((data) => setImageUrl(data.message));
   });
 
+  if (!imageUrl) return <p>Loading...</p>;
+
   return (
     <div>
-      <h2>Wagwan wadau</h2>
       <img src={imageUrl} alt="A Random Dog" />
     </div>
   );
